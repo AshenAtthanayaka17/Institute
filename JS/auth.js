@@ -1,5 +1,5 @@
 // auth.js
-import { app } from './firebase-config.js';
+import { app } from 'JS/firebase-config.js';
 
 import {
     getAuth,
@@ -66,7 +66,7 @@ window.loginWithGoogle = async function () {
         const result = await signInWithPopup(auth, provider);
         // const credential = GoogleAuthProvider.credentialFromResult(result);
         console.log("Google login success:", result.user.email);
-        window.location.href = "home.html";
+        window.location.href = "HTML/home.html";
     } catch (error) {
         let msg = "Google login failed";
         if (error.code === 'auth/popup-closed-by-user') {
