@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AETS - Dashboard</title>
+    <link rel="stylesheet" href="CSS/home-styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>AETS Dashboard</h1>
+            <div class="subtitle">Aeronautical Engineering Training School</div>
+        </header>
+
+        <div class="card">
+            <h2 id="welcome-message">Welcome</h2>
+
+            <div class="user-info-grid">
+                <div class="label">Name:</div>
+                <div class="value" id="display-name">Loading...</div>
+
+                <div class="label">Email:</div>
+                <div class="value" id="user-email">—</div>
+
+                <div class="label">Phone:</div>
+                <div class="value" id="user-phone">—</div>
+
+                <div class="label">Signed in with:</div>
+                <div class="value" id="provider">Loading...</div>
+
+                <div class="label">User ID:</div>
+                <div class="value" id="uid" style="font-family: monospace; font-size: 0.95rem;"></div>
+
+                <div class="label">Last sign-in:</div>
+                <div class="value" id="last-signin">—</div>
+            </div>
+
+            <button class="logout-btn" onclick="logout()">Sign Out</button>
+        </div>
+
+        <div class="card">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">My Courses</a></li>
+                <li><a href="#">Schedule & Timetable</a></li>
+                <li><a href="#">Study Materials</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Profile Settings</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            © 2026 AETS Aeronautical Engineering Training School • Negombo, Sri Lanka
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="JS/firebase-config.js"></script>
+    <script type="module" src="JS/home.js"></script>
+
+</body>
+
+</html>

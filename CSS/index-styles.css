@@ -1,0 +1,71 @@
+/* ... keep your existing styles ... */
+
+.tabs {
+    display: flex;
+    margin: 24px 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tab {
+    flex: 1;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    color: #aaa;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab.active {
+    color: white;
+    border-bottom: 3px solid #4da6ff;
+    font-weight: bold;
+}
+
+.tab-content {
+    transition: opacity 0.3s;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 14px;
+    background: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.google-btn:hover {
+    background: #f0f0f0;
+}
+
+.google-btn::before {
+    content: "G";
+    font-weight: bold;
+    color: #4285F4;
+    font-size: 1.4rem;
+}
+
+input[type="tel"], input[type="text"]#otp {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+#recaptcha-container {
+    margin: 16px 0;
+    min-height: 40px;
+}
