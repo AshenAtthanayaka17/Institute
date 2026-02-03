@@ -2,81 +2,113 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AETS - Login</title>
-    <link rel="stylesheet" href="CSS/index-styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETS | Aviation School</title>
+    <link href="CSS/index-styles.css" rel="stylesheet">
+    <script src="JS/auth.js"></script>
+    <script src="JS/firebase-config.js"></script>
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="login-box">
-            <h1>AETS Aeronautical Engineering Training School</h1>
-            <p>Sign in to continue</p>
-
-            <!-- Tab-like buttons -->
-            <div class="tabs">
-                <button class="tab active" onclick="showTab('email')">Email</button>
-                <button class="tab" onclick="showTab('google')">Google</button>
-                <button class="tab" onclick="showTab('phone')">Phone</button>
+    <header>
+        <div class="head-navbar">
+            <div class="nav-button-arry">
+                <button class="nav-button" onclick="window.location.href='HTML/underconstructions.html'" alt="Home">Home</button>
+                <button class="nav-button" onclick="window.location.href='HTML/courses.html'"
+                    alt="Courses">Courses</button>
+                <button class="nav-button" onclick="window.location.href='HTML/else.html'"
+                    alt="E Learning Management System">Lms</button>
+                <button class="nav-button" onclick="window.location.href='HTML/contact.html'"
+                    alt="Contact Us">Contact</button>
+                <button class="nav-button" onclick="window.location.href='HTML/exams.html'"
+                    alt="Exam Results">Exams</button>
+                <img src="Assets/Icons/main.png" class="nav-logo" alt="AETS Logo">
             </div>
 
-            <!-- Email form -->
-            <div id="email-tab" class="tab-content active">
-                <form onsubmit="return false;">
-                    <input type="email" id="email" placeholder="Email" required autocomplete="email" />
-                    <input type="password" id="password" placeholder="Password" required
-                        autocomplete="current-password" />
-                    <button type="button" onclick="loginWithEmail()">Login with Email</button>
-                </form>
-            </div>
-
-            <!-- Google button -->
-            <div id="google-tab" class="tab-content" style="display:none;">
-                <button class="google-btn" onclick="loginWithGoogle()">
-                    <span>Sign in with Google</span>
-                </button>
-            </div>
-
-            <!-- Phone form -->
-            <div id="phone-tab" class="tab-content" style="display:none;">
-                <form onsubmit="return false;">
-                    <input type="tel" id="phone" placeholder="+44 7123 456785" required />
-                    <button type="button" onclick="sendPhoneOTP()">Send OTP</button>
-
-                    <div id="otp-group" style="display:none; margin-top:16px;">
-                        <input type="text" id="otp" placeholder="Enter 6-digit OTP" maxlength="6" />
-                        <button type="button" onclick="verifyPhoneOTP()">Verify OTP</button>
-                    </div>
-                </form>
-            </div>
-
-            <p id="error" class="error"></p>
-
-            <!-- Invisible reCAPTCHA container (required for phone) -->
-            <div id="recaptcha-container"></div>
-
-            <div class="links">
-                <a href="#">Forgot password?</a>
+            <div class="title-everyone">
+                <span class="nav-title-aets" onclick="window.location.href='HTML/index.html'">AETS</span>
+                <span class="nav-title-dotspace" onclick="window.location.href='HTML/index.html'">.Space</span>
             </div>
         </div>
-    </div>
+    </header>
 
-    <script type="module" src="JS/firebase-config.js"></script>
-    <script type="module" src="JS/auth.js"></script>
+    <main>
+        <section class="upper-half">
+            <div class="heading-site-home">
+                <h1 class="heading-name">AETS Institute of Aviators</h1>
+                <p class="sub-heading">"Your trusted aviation partner"</p>
 
-    <script>
-        // Simple tab switching
-        function showTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+                <div class="photo-reels">
+                    <img src="Assets/Images/Photo Reels/01.jpg" alt="photo one" class="photo-box"
+                        onclick="window.location.href='https://www.airbus.com/en'">
+                    <img src="Assets/Images/Photo Reels/02.jpg" alt="photo one" class="photo-box"
+                        onclick="window.location.href='https://www.boeing.com/'">
+                    <img src="Assets/Images/Photo Reels/04.jpg" alt="photo one" class="photo-box"
+                        onclick="window.location.href='https://cessna.txtav.com/'">
+                    <img src="Assets/Images/Photo Reels/03.jpg" alt="photo one" class="photo-box"
+                        onclick="window.location.href='https://www.embraer.com/en/'">
+                </div>
 
-            document.getElementById(tabName + '-tab').style.display = 'block';
-            event.target.classList.add('active');
-        }
-    </script>
+                <div class="para-introduction">
+                    <p class="intro-para">
+                        Welcome to AETS Institute of Aviators, your trusted partner in aviation education, training, and
+                        professional development. At AETS, we are driven by a clear mission: to shape confident,
+                        skilled, and safety-focused aviation professionals who are ready to meet the demands of the
+                        global aviation industry.
+                    </p>
+                </div>
+            </div>
+        </section>
 
+        <section class="main-index">
+            <div class="why-us">
+                <h3 class="why-us-heading">Why Choose AETS?</h3>
+                <p class="why-us-para">
+                    At AETS Institute of Aviators, we are committed to excellence in aviation education and training.
+                    Here are some compelling reasons why you should choose us as your aviation training partner:
+                    your aviation career. put yours here...
+                </p>
+            </div>
+        </section>
+
+        <section class="recognition">
+            <div class="recognition-content">
+                <h3 class="recognition-heading">Our Recognition</h3>
+                <p class="recognition-para">
+                    We are proud to be recognized by leading aviation authorities and organizations for our commitment
+                    to
+                    quality education and training. Our programs are designed to meet international standards. also
+                    world class airlines will recognize our students for hiring purposes.
+                </p>
+                <div class="companies-airlines">
+                    <img src="Assets/Images/Recognitions/01.jpg" class="reco-img-box" alt="rep1">
+                    <img src="Assets/Images/Recognitions/02.jpg" class="reco-img-box" alt="rep2">
+                    <img src="Assets/Images/Recognitions/03.jpg" class="reco-img-box" alt="rep3">
+                    <img src="Assets/Images/Recognitions/04.jpg" class="reco-img-box" alt="rep4">
+                    <img src="Assets/Images/Recognitions/05.jpg" class="reco-img-box" alt="rep5">
+                    <img src="Assets/Images/Recognitions/06.jpg" class="reco-img-box" alt="rep6">
+                    <img src="Assets/Images/Recognitions/07.jpg" class="reco-img-box" alt="rep7">
+                    <img src="Assets/Images/Recognitions/08.jpg" class="reco-img-box" alt="rep8">
+                    <img src="Assets/Images/Recognitions/09.jpg" class="reco-img-box" alt="rep9">
+                    <img src="Assets/Images/Recognitions/10.jpg" class="reco-img-box" alt="rep10">
+                    <img src="Assets/Images/Recognitions/11.jpg" class="reco-img-box" alt="rep11">
+                    <img src="Assets/Images/Recognitions/12.jpg" class="reco-img-box" alt="rep12">
+                    <img src="Assets/Images/Recognitions/13.jpg" class="reco-img-box" alt="rep13">
+                    <img src="Assets/Images/Recognitions/14.jpg" class="reco-img-box" alt="rep14">
+                    <img src="Assets/Images/Recognitions/15.jpg" class="reco-img-box" alt="rep15">
+                    <img src="Assets/Images/Recognitions/16.jpg" class="reco-img-box" alt="rep16">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-box">
+                <p class="crc">&copy; 2024 AETS Institute of Aviators. All rights reserved.</p>
+            </div>
+        </div>
 </body>
 
 </html>

@@ -1,69 +1,250 @@
-.tabs {
+html {
+    overflow-y: auto
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(0, 0, 0);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.head-navbar {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 230, 230);
+    border-radius: 100px;
     display: flex;
-    margin: 24px 0 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.tab {
-    flex: 1;
-    padding: 12px;
-    background: transparent;
+.nav-button {
+    background-color: transparent;
+    color: black;
     border: none;
-    color: #aaa;
-    font-size: 1rem;
     cursor: pointer;
-    transition: all 0.2s;
+    padding-right: 5px;
+    padding-top: 5px;
+    margin-left: 10px;
 }
 
-.tab.active {
+.nav-button:hover {
     color: white;
-    border-bottom: 3px solid #4da6ff;
-    font-weight: bold;
+    background-color: rgb(4, 29, 196);
+    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
-.tab-content {
-    transition: opacity 0.3s;
+.nav-logo {
+    height: 26px;
+    width: 26px;
+    float: left;
+    padding-left: 5px;
 }
 
-.google-btn {
-    width: 100%;
-    padding: 14px;
-    background: #ffffff;
-    color: #333;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.05rem;
-    cursor: pointer;
+.title-everyone {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 16px;
+    padding-right: 10px;
+    float: right;
+    margin-right: 10px;
 }
 
-.google-btn:hover {
-    background: #f0f0f0;
+.title-everyone:hover {
+    cursor: pointer;
+    transition: transform 0.2s;
+    transform: scale(1.1);
+
+    .nav-title-aets {
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 100px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
 }
 
-.google-btn::before {
-    content: "G";
+.nav-title-aets {
+    font-size: 20px;
+    font-family: 'San Francisco';
     font-weight: bold;
-    color: #4285F4;
-    font-size: 1.4rem;
+    color: rgb(0, 25, 189);
 }
 
-input[type="tel"], input[type="text"]#otp {
-    width: 100%;
-    padding: 14px 16px;
-    margin: 12px 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.15);
-    color: white;
+.nav-title-dotspace {
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(0, 63, 189);
 }
 
-#recaptcha-container {
-    margin: 16px 0;
-    min-height: 40px;
+.heading-name {
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    font-family: 'San Francisco';
+    font-size: 40px;
+    transform: scaleY(2);
+}
+
+.sub-heading {
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    font-family: 'San Francisco';
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+.photo-box {
+    width: 200px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.photo-reels {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.photo-box:hover {
+    transform: scale(1.10);
+    transition: transform 0.5s;
+}
+
+.para-introduction {
+
+    .intro-para {
+        color: rgb(255, 255, 255);
+        font-family: 'San Francisco';
+        font-size: 18px;
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        /*line-height: 1.0;*/
+    }
+}
+
+.why-us {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: rgb(255, 230, 230) 0px 0px 10px 0px;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+
+    .why-us-heading {
+        font-family: 'San Francisco';
+        font-size: 30px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    .why-us-para {
+        font-family: 'San Francisco';
+        font-size: 18px;
+        text-align: center;
+        margin-left: 20px;
+        margin-top: 0px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        line-height: 1.0;
+    }
+}
+
+.why-us:hover {
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px 0px;
+    transition: box-shadow 2.0s;
+}
+
+.recognition-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: auto;
+
+    .recognition-heading {
+        font-family: 'San Francisco';
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        margin-bottom: 10px;
+    }
+
+    .recognition-para {
+        font-family: 'San Francisco';
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        line-height: 1.0;
+    }
+}
+
+.companies-airlines {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 80%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+}
+
+.reco-img-box{
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+.footer-box{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-right: 1%;
+    margin-left: 1;
+    .crc{
+        font-family: 'San Francisco';
+        font-size: 14px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 10px;
+    }
 }
